@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Shop</title>
+</head>
+<body onload = "loadContr()">
+    <img src="img/shop.png" class="img-shop">
+    <div class="container">    
+        <form onsubmit="return authFormContr();" class="form" name="form">
+            <input type="text" placeholder = "Логин" required name="login" class="input" name="login">
+            <input type="password" placeholder = "Пароль" required name="password" class="input" name="password">
+            <button type="submit" class="but-enter">Войти</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <button class="but_exit" onclick = "exitFromMain()">Выйти</button>
+        
+        <div class="item">
+            <img src="img/item1.jpg" class="item-img">
+            <p class="item-name" onclick="showDescContr()">Casio EFR-526L-1A</p>
+            <p class="item-desc">Мужские часы, кварцевые деловые наручные</p>
+            <p class="item-price">Цена: 35000р.</p>
+            <img src="img/backet.png" class="item-backet" onclick="buyContr()">
+        </div>
+        <div class="item">
+            <img src="img/item2.jpg" class="item-img">
+            <p class="item-name" onclick="showDescContr()">Sokolov SR-50FX-13</p>
+            <p class="item-desc">Мужские часы, кварцевые деловые наручные</p>
+            <p class="item-price">Цена: 15000р.</p>
+            <img src="img/backet.png" class="item-backet" onclick="buyContr()">
+         </div>
+         <div class="item">
+            <img src="img/item3.jpg" class="item-img">
+            <p class="item-name" onclick="showDescContr()">Sokolov SR-40FX-18</p>
+            <p class="item-desc">Мужские часы, кварцевые деловые наручные</p>
+            <p class="item-price">Цена: 15000р.</p>
+            <img src="img/backet.png" class="item-backet" onclick="buyContr()">
+        </div>
+        <div class="item">
+            <img src="img/item4.jpg" class="item-img">
+            <p class="item-name" onclick="showDescContr()">CRRJU MX-40FX-19</p>
+            <p class="item-desc">Мужские часы, кварцевые деловые наручные</p>
+            <p class="item-price">Цена: 35000р.</p>
+            <img src="img/backet.png" class="item-backet" onclick="buyContr()">
+        </div>
+
+        <div class="backet">
+            <p class="sum"></p>
+        </div>
+    </div>
+
+    <div class ="container">
+        <div class="check">
+            <p class="congr">Поздравляем!<br> Вы приобрели следующие товары: </p>
+
+        </div>
+        <button class="back_to_shop" onclick="backToMain()">Вернуться в магазин</button>
+    </div>
+</body>
+<link href="css/main.css" rel="stylesheet">
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/controller.js"></script>
+</html>
